@@ -61,7 +61,9 @@ grab_version(){
 push_config(){
   cd $config_folder
   echo Pushing updates
+  #从远程仓库拉取更新
   git pull -v
+  #合并
   git add . -v
   current_date=$(date +"%Y-%m-%d %T")
   git commit -m "Backup triggered on $current_date" -m "$m1" -m "$m2" -m "$m3" -m "$m4"
