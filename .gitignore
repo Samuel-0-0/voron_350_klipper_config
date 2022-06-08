@@ -1,0 +1,7 @@
+.theme
+.ssl
+input_shaper
+printer-*.cfg
+.moonraker.conf.bkp
+timelapse.cfg
+.github_token
