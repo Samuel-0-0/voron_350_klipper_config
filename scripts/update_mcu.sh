@@ -29,12 +29,12 @@ function update_vast {
     echo -e "${yellow}开始更新 VAST 打印头控制板${default}"
     echo -e ""
     make clean
-    #make menuconfig KCONFIG_CONFIG=/home/samuel/klipper_config/scripts/vast-072.config
-    make KCONFIG_CONFIG=/home/samuel/klipper_config/scripts/vast-072.config
+    #make menuconfig KCONFIG_CONFIG=~/klipper_config/scripts/vast-072.config
+    make KCONFIG_CONFIG=~/klipper_config/scripts/vast-072.config
     echo -e ""
     read -e -p "${yellow}固件编译完成，请检查上面是否有错误。 按 [Enter] 继续更新固件，或者按 [Ctrl+C] 取消${default}"
     echo -e ""
-    make flash KCONFIG_CONFIG=/home/samuel/klipper_config/scripts/vast-072.config FLASH_DEVICE=$TOOLHEAD_BOARD
+    make flash KCONFIG_CONFIG=~/klipper_config/scripts/vast-072.config FLASH_DEVICE=$TOOLHEAD_BOARD
     if [ $? -eq 0 ]
     then
         echo -e ""
@@ -56,12 +56,12 @@ function update_octopus {
     echo -e "${yellow}开始更新 BigTreeTech OctoPus Pro v1.0(STM32F446)${default}"
     echo -e ""
     make clean
-    #make menuconfig KCONFIG_CONFIG=/home/samuel/klipper_config/scripts/btt-octopus-pro-446.config
-    make KCONFIG_CONFIG=/home/samuel/klipper_config/scripts/btt-octopus-pro-446.config
+    #make menuconfig KCONFIG_CONFIG=~/klipper_config/scripts/btt-octopus-pro-446.config
+    make KCONFIG_CONFIG=~/klipper_config/scripts/btt-octopus-pro-446.config
     echo -e ""
     read -p "${yellow}固件编译完成，请检查上面是否有错误。 按 [Enter] 继续更新固件，或者按 [Ctrl+C] 取消${default}"
     echo -e ""
-    make flash KCONFIG_CONFIG=/home/samuel/klipper_config/scripts/btt-octopus-pro-446.config FLASH_DEVICE=$MAIN_BOARD
+    make flash KCONFIG_CONFIG=~/klipper_config/scripts/btt-octopus-pro-446.config FLASH_DEVICE=$MAIN_BOARD
     if [ $? -eq 0 ]
     then
         echo -e ""
@@ -83,12 +83,12 @@ function update_octopus_sdcard {
     echo -e "${yellow}开始更新 BigTreeTech OctoPus Pro v1.0(STM32F446)${default}"
     echo -e ""
     make clean
-    ###make menuconfig KCONFIG_CONFIG=/home/samuel/klipper_config/script/btt-octopus-pro-446.config
-    make KCONFIG_CONFIG=/home/samuel/klipper_config/script/btt-octopus-pro-446.config
+    ###make menuconfig KCONFIG_CONFIG=~/klipper_config/script/btt-octopus-pro-446.config
+    make KCONFIG_CONFIG=~/klipper_config/script/btt-octopus-pro-446.config
     echo -e ""
     read -p "${yellow}固件编译完成，请检查上面是否有错误。 按 [Enter] 继续更新固件，或者按 [Ctrl+C] 取消${default}"
     echo -e ""
-    # 查看支持的设备执行 cd /home/samuel/klipper && ./scripts/flash-sdcard.sh -l
+    # 查看支持的设备执行 cd ~/klipper && ./scripts/flash-sdcard.sh -l
     ./scripts/flash-sdcard.sh $MAIN_BOARD
     echo -e ""
     read -p "${yellow}固件更新完成，请检查上面是否有错误。 按 [Enter] 继续更新固件，或者按 [Ctrl+C] 取消${default}"
@@ -114,7 +114,7 @@ function stop_service {
     echo -e "${yellow}正在停止klipper服务..."
     sudo service klipper stop
     echo -e "完成${default}"
-    cd /home/samuel/klipper
+    cd ~/klipper
 }
 #######################################################################
 ###      启动klipper服务
