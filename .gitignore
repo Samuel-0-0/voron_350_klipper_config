@@ -3,5 +3,6 @@
 input_shaper
 printer-*.cfg
 .moonraker.conf.bkp
+moonraker.conf.backup
 timelapse.cfg
 .github_token
