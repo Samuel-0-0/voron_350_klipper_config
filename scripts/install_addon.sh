@@ -107,13 +107,14 @@ function install_gcode_shell_command {
         echo -e ""
         exit 1
     fi
+}
 
 cd ~
-echo -e "${yellow}开始安装webcam${default}"
-install_webcam
 echo -e "${yellow}开始安装gcode_shell_command${default}"
 install_gcode_shell_command
 echo -e "${yellow}开始安装timelapse${default}"
 install_timelapse
 echo -e "${yellow}开始安装klipper_z_calibration${default}"
 install_klipper_z_calibration
+echo -e "${yellow}开始安装webcam${default}"
+install_webcam
