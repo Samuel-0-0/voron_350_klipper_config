@@ -6,8 +6,8 @@ yellow=$(echo -en "\e[93m")
 red=$(echo -en "\e[91m")
 default=$(echo -en "\e[39m")
 
-# webcam，使用crowsnest替代MJPG-Streamer
-function install_webcam {
+# crowsnest，替代MJPG-Streamer
+function install_crowsnest {
     if [ -d "crowsnest" ]; then
         rm -rf crowsnest
     fi
@@ -116,5 +116,5 @@ echo -e "${yellow}开始安装timelapse${default}"
 install_timelapse
 echo -e "${yellow}开始安装klipper_z_calibration${default}"
 install_klipper_z_calibration
-echo -e "${yellow}开始安装webcam${default}"
-install_webcam
+echo -e "${yellow}开始安装crowsnest${default}"
+install_crowsnest

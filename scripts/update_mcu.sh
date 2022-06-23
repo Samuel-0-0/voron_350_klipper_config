@@ -83,7 +83,7 @@ function update_octopus_sdcard {
     echo -e "${yellow}开始更新 BigTreeTech OctoPus Pro v1.0(STM32F446)${default}"
     echo -e ""
     make clean
-    ###make menuconfig KCONFIG_CONFIG=~/klipper_config/script/btt-octopus-pro-446.config
+    #make menuconfig KCONFIG_CONFIG=~/klipper_config/script/btt-octopus-pro-446.config
     make KCONFIG_CONFIG=~/klipper_config/script/btt-octopus-pro-446.config
     echo -e ""
     read -p "${yellow}固件编译完成，请检查上面是否有错误。 按 [Enter] 继续更新固件，或者按 [Ctrl+C] 取消${default}"
